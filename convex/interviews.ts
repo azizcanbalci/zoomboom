@@ -23,7 +23,7 @@ export const getMyInterviews = query({
         return interviews;
     },
 });
-export const getInterviewBystreamCallId = query({
+export const getInterviewByStreamCallId = query({
     args:{
         streamCallId:v.string(),//stream call id
     },
@@ -55,7 +55,7 @@ export const createInterview = mutation({
     }
 });
 
-export const updateInterview = mutation({
+export const updateInterviewStatus = mutation({
     args:{
         id:v.id("interviews"),
         status:v.string(),
