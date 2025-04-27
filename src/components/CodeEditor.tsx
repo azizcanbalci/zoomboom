@@ -6,8 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { AlertCircleIcon, BookIcon, LightbulbIcon, PlayIcon } from "lucide-react";
 import Editor from "@monaco-editor/react";
-import { Button } from "./ui/button";
-import { run } from "node:test";
+
 
 
 function CodeEditor() {
@@ -26,13 +25,6 @@ function CodeEditor() {
     setCode(selectedQuestion.starterCode[newLanguage]);
   };
 
-  const runCode = () => {
-    // This is where you would implement the logic to run the codeW
-    // For example, you could send the code to a server for execution
-    console.log("Running code:", code);
-    console.log("Selected language:", language);
-    console.log("Selected question:", selectedQuestion.title);
-  };
 
 
   return (
@@ -175,9 +167,6 @@ function CodeEditor() {
       {/* CODE EDITOR */}
       <ResizablePanel defaultSize={60} maxSize={100}>
         <div className="h-full relative">
-            <Button variant={"destructive"} onClick={runCode} className="absolute top-0 right-4 z-10 rounded-full"> 
-              <PlayIcon className="h-2 w-4 mr-1" /> 
-            </Button>
           <Editor
             height={"100%"}
             defaultLanguage={language}
