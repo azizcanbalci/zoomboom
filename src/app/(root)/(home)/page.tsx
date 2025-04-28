@@ -11,6 +11,7 @@ import MeetingModal from "@/components/MeetingModal";
 
 
 import { Loader2Icon } from "lucide-react";
+import LoaderUI from "@/components/LoaderUI";
 
 
 export default function Home() {
@@ -36,7 +37,7 @@ export default function Home() {
     }
   };
 
-  // if (isLoading) return <LoaderUI />;
+  if (isLoading) return <LoaderUI />;
 
   return (
     <div className="container max-w-7xl mx-auto p-6">
