@@ -18,7 +18,9 @@ import {
 } from "./ui/dropdown-menu";
 import { Button } from "./ui/button";
 import EndCallButton from "./EndCallButton";
-import CodeEditor from "./CodeEditor";
+import YoutubeButton from "./YoutubeButton";
+
+// import CodeEditor from "./CodeEditor";
 
 
 function MeetingRoom() {
@@ -86,19 +88,21 @@ function MeetingRoom() {
                     <UsersIcon className="size-4" />
                   </Button>
 
-                 <EndCallButton />
-                  
+                <EndCallButton />
+                <YoutubeButton />
+                
                 </div>
               </div>
             </div>
           </div>
         </ResizablePanel>
 
-        <ResizableHandle withHandle />
+        <ResizableHandle withHandle/>
 
-        <ResizablePanel defaultSize={65} minSize={25}>
-          <CodeEditor /> 
-          <div>code editor will be here </div>
+        <ResizablePanel defaultSize={65} minSize={1} maxSize={100}>
+          {/* <CodeEditor /> 
+          <div>code editor will be here </div> */}
+          <YoutubeButton />
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>
