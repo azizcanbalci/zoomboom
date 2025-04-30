@@ -29,6 +29,11 @@ comments:defineTable({
     interviewerId:v.string(),//interviewer clerk id
     interviewId:v.id("interviews"),//interview id
 }).index("by_interview_id",["interviewId"]),
+
+videoUrl: defineTable({
+    url: v.string(),
+    updatedAt: v.number(),
+  }),
 });
 
 
